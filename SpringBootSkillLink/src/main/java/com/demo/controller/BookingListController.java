@@ -41,7 +41,9 @@ public class BookingListController {
 		
 		@PostMapping("/addData")
 		public ResponseEntity<?> adduser(@RequestBody BookingList bData){
-			System.out.println(bData.toString());
+			System.out.println("add booking");
+			System.out.println(bData);
+			//System.out.println(bData.toString());
 				bookingListserv.add(bData);
 				
 				

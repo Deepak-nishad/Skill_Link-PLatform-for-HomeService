@@ -20,7 +20,7 @@ public class UserRequirementServiceImpl implements UserRequirementService{
 
 	@Override
 	public void addUserRequirement(UserRequirement u) {
-		userrequiredao.save(u);
+		 userrequiredao.save(u);
 	}
 
 	@Override

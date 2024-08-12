@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
@@ -15,20 +16,31 @@ public class BookingList {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique = true, nullable = false)
 	private int Bookingid;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="Userid")
 	private User userid;
 //	private int userid;
+	@Column(name="sid")
 	private int sid;
+	@Column(name="Namefirst")
 	private String Namefirst;
+	@Column(name="Namelast")
 	private String Namelast;
+	@Column(name="Phonenumber")
 	private String Phonenumber;
+	@Column(name="Skills")
 	private String Skills;
+	@Column(name="Date")
 	private String Date;
+	@Column(name="Rating")
 	private String Rating;
+	@Column(name="Status")
 	private String Status;
+	@Column(name="Wages")
 	private String Wages;
+	@Column(name="Address")
 	private String Address;
+	@Column(name="requirementId")
 	private int requirementId;
 	
 	

@@ -18,11 +18,17 @@ public class ConfirmList {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique = true, nullable = false)
 	private int confirmid;
+	@Column(name="wages")
 	private String wages;
+	@Column(name="address")
 	private String address;
+	@Column(name="date")
 	private String date;
+	@Column(name="namefirst")
 	private String namefirst;
+	@Column(name="namelast")
 	private String namelast;
+	@Column(name="Phonenumber")
 	private String  Phonenumber;
 	@OneToOne
 	@JoinColumn(name="Serviceproviderid")
