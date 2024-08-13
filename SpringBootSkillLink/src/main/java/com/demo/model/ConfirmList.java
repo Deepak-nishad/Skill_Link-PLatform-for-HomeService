@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -30,7 +31,7 @@ public class ConfirmList {
 	private String namelast;
 	@Column(name="Phonenumber")
 	private String  Phonenumber;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="Serviceproviderid")
 	private ServiceProvider sid;
 	public ConfirmList() {

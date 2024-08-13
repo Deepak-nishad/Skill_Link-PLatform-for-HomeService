@@ -39,9 +39,29 @@ public class User {
 	
 	@OneToMany(mappedBy="userid",cascade = CascadeType.ALL)
 	private Set<UserRequirement> Reqlist;
+	
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	private Set<Feedback> feedbacksGiven;
+
+	// Getters and Setters for feedbacksGiven
+
+	/*
+	 * public Set<Feedback> getFeedbacksGiven() { return feedbacksGiven; }
+	 * 
+	 * public void setFeedbacksGiven(Set<Feedback> feedbacksGiven) {
+	 * this.feedbacksGiven = feedbacksGiven; }
+	 */
+	
+	
 
 	public User() {
 		super();
+	}
+	public Set<Feedback> getFeedbacksGiven() {
+		return feedbacksGiven;
+	}
+	public void setFeedbacksGiven(Set<Feedback> feedbacksGiven) {
+		this.feedbacksGiven = feedbacksGiven;
 	}
 	public User(String username, String password) {
 		super();

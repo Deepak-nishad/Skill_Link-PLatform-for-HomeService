@@ -43,6 +43,20 @@ public class ServiceProvider {
 	public ServiceProvider(int sid) {
         Serviceproviderid = sid;
     }
+	
+	@OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
+	private Set<Feedback> feedbacksReceived;
+
+	// Getters and Setters for feedbacksReceived
+
+	public Set<Feedback> getFeedbacksReceived() {
+	    return feedbacksReceived;
+	}
+
+	public void setFeedbacksReceived(Set<Feedback> feedbacksReceived) {
+	    this.feedbacksReceived = feedbacksReceived;
+	}
+
 	public ServiceProvider() {
 		super();
 		// TODO Auto-generated constructor stub
